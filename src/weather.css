@@ -1,9 +1,8 @@
 .weather-wrapper {
-    border: 1px solid #dadde1;
+    border: 0px solid #dadde1;
      padding: 16px;
      border-radius: 4px;
 }
-
 .weather-wrapper h1 {
   font-size: 24px;
   font-weight: 100;

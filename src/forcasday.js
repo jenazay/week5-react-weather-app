@@ -12,10 +12,10 @@ export default function ForcastDay(props) {
           <img src={props.data.condition.icon_url} alt="icon" />
           <div className="WeatherForecast-temperatures">
             <span className="WeatherForecast-temperature-max">
-              {props.data.temperature.maximum}°
+              {Math.round(props.data.temperature.maximum)}°
             </span>
             <span className="WeatherForecast-temperature-min">
-              {props.data.temperature.minimum}°
+              {Math.round(props.data.temperature.minimum)}°
             </span>
           </div>
         </div>
