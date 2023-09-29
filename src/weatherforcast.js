@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React,{useState , useEffect} from "react";
 import "./weatherforcast.css"
 import axios from "axios";
 import ForcastDay from "./forcasday";
@@ -14,7 +14,9 @@ export default function WeatherForecast(props) {
       setLoaded(true);
       
 }
-
+  useEffect(() => {
+    setLoaded(false);
+  },[props.data]);
 
   if (loaded) {
     console.log(forcast);
