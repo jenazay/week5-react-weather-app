@@ -9,7 +9,7 @@ export default function WeatherForecast(props) {
 
     function handleResponse(response) {
       console.log(response);
-      setForcast(response.data.daily[0]);
+      setForcast(response.data.daily);
       setLoaded(true);
       
 }
@@ -19,7 +19,17 @@ export default function WeatherForecast(props) {
     console.log(forcast);
     return (
       <div className="WeatherForecast">
-        <ForcastDay data={forcast} />
+        <div className="row">
+          {forcast.map(function (dailyforcast, index) {
+            if (index < 4) {
+              return (
+                <div className="col" key={index}>
+                  <ForcastDay data={dailyforcast} />
+                </div>
+              );
+            }
+          })}
+        </div>
       </div>
     );
   }
